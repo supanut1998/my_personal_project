@@ -1,0 +1,6 @@
+requirements.txt
+.env
+logs/*
+dags/__pycache__/*
+dags/etl_function/__pycache__/*
+unit_test/__pycache__/*
