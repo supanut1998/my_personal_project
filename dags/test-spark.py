@@ -13,6 +13,8 @@ dag = DAG(
     default_args=default_args,
     description='A simple test DAG to submit Spark jobs',
     schedule_interval=timedelta(days=1),
+    start_date=datetime(2024, 1, 1),
+    catchup=False
 )
 
 # Define the SparkSubmitOperator task
