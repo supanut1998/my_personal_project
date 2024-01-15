@@ -20,7 +20,7 @@ dag = DAG(
 # Define the SparkSubmitOperator task
 submit_spark_job = SparkSubmitOperator(
     task_id='submit_spark_job',
-    application='spark-file.py',  # Path to your Spark application
+    application='/dags/repo/dags/spark-file.py',  # Path to your Spark application
     conn_id='spark_default',  # Connection ID for Spark
     executor_cores=2,
     executor_memory='2g',
