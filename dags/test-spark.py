@@ -22,10 +22,6 @@ submit_spark_job = SparkSubmitOperator(
     task_id='submit_spark_job',
     application='/opt/airflow/dags/repo/dags/spark-file.py',  # Path to your Spark application
     conn_id='spark_default',  # Connection ID for Spark
-    executor_cores=2,
-    executor_memory='2g',
-    num_executors=2,
-    driver_memory='1g',
     name='airflow-spark-test-job',
     dag=dag,
 )
