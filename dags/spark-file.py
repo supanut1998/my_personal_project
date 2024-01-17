@@ -2,9 +2,10 @@ from pyspark.sql import SparkSession
 from pyspark.sql import Row
 
 def main():
-    # Initialize Spark Session
+    # Initialize Spark Session with spark.driver.host configuration
     spark = SparkSession.builder \
         .appName("Test Spark DataFrame") \
+        .config("spark.driver.host", "spark://spark-master-0.spark-headless.airflow-cluster.svc.cluster.local") \
         .getOrCreate()
 
     # Sample data
