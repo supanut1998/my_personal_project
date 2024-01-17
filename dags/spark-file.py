@@ -1,13 +1,11 @@
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
-import socket
 
 def main():
-    localIpAddress = socket.gethostbyname(socket.gethostname())
+
     # Initialize Spark Session with spark.driver.host configuration
     spark = SparkSession.builder \
         .appName("Test Spark DataFrame") \
-        .config('spark.driver.host', localIpAddress) \
         .getOrCreate()
 
 
